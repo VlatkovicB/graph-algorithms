@@ -27,14 +27,16 @@ const toGraph = (list) => {
   return graph
 }
 
-const reconstructPath = (path, target) => {
+const reconstructPath = (path, start, target) => {
   const order = [target]
 
   for (let i = path[target]; i.previous !== null; i = path[i.previous]) {
     order.push(i.previous)
   }
   order.reverse()
-  return order
+
+  if (order[0] === start) return order
+  return []
 }
 
 const bfs = (graph, start) => {
@@ -65,9 +67,8 @@ const bfs = (graph, start) => {
 
 const findShortestPath = (list, start, end) => {
   const graph = toGraph(list)
-  // console.log(graph, start, end)
   const path = bfs(graph, start)
-  return reconstructPath(path, end)
+  return reconstructPath(path, start, end)
 }
 
 for (let i of entries) {
