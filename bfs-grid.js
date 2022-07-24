@@ -44,8 +44,12 @@ const bfs = (graph, start) => {
 
       if (!next.visited) {
         queue.push(neighbor)
-        next.visited = true
         next.previous = current.key
+        next.visited = true
+      }
+
+      if (next.isEnd) {
+        return graph
       }
     }
   }
@@ -57,7 +61,7 @@ const findShortestPath = (map, start, end) => {
   const adjacencyList = graphToAL(map)
 
   const path = bfs(adjacencyList, start, end)
-  return reconstructPath(path, end)
+  return reconstructPath(path, end).map((e) => e.key)
 }
 
 const graphToAL = (map) => {
@@ -106,7 +110,9 @@ const reconstructPath = (map, end) => {
 
   path.reverse()
 
-  if (path[0] && map[path[0].previous].isStart) return path
+  if (path[0] && map[path[0].previous].isStart) {
+    return [map[0], ...path]
+  }
   return []
 }
 
