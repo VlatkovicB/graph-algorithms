@@ -1,13 +1,4 @@
-const graph = {
-  0: [8, 1, 5],
-  1: [0],
-  5: [0, 8],
-  8: [0, 5],
-  2: [3, 4],
-  3: [2, 4],
-  4: [3, 2],
-}
-
+import { undirected_cyclic_graph } from "./example_const.js"
 const connectedComponentsCount = (graph) => {
   let count = 0
   const components = []
@@ -33,4 +24,4 @@ const dfs = (graph, node, visited, components, count) => {
   }
 }
 
-console.log(connectedComponentsCount(graph))
+console.log(connectedComponentsCount(undirected_cyclic_graph))

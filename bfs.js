@@ -1,22 +1,4 @@
-const entries = [
-  [
-    ["a", "c"],
-    ["a", "b"],
-    ["c", "b"],
-    ["c", "d"],
-    ["b", "d"],
-    ["d", "e"],
-    ["e", "g"],
-    ["g", "f"],
-  ],
-  [
-    ["c", "n"],
-    ["c", "e"],
-    ["c", "s"],
-    ["c", "w"],
-    ["w", "e"],
-  ],
-]
+import { entries } from "./example_const.js"
 
 const toGraph = (list) => {
   const graph = {}

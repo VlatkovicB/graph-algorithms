@@ -1,10 +1,4 @@
-const example = [
-  ["S", ".", ".", "#", ".", ".", "."],
-  [".", "#", ".", ".", ".", "#", "."],
-  [".", "#", ".", ".", ".", ".", "."],
-  [".", ".", "#", "#", ".", ".", "."],
-  ["#", ".", "#", "E", ".", "#", "."],
-]
+import { matrix } from "./example_const.js"
 
 // UNUSED
 const bfsMatrix = (map = [[]], start, end) => {
@@ -116,4 +110,4 @@ const reconstructPath = (map, end) => {
   return []
 }
 
-console.log(findShortestPath(example, 0, 31))
+console.log(findShortestPath(matrix, 0, 31))
