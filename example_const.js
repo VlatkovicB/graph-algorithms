@@ -51,3 +51,12 @@ export const entries = [
     ["w", "e"],
   ],
 ]
+
+export const directed_weighted_acylclic_list = [
+  [0, 1, 4],
+  [0, 2, 1],
+  [1, 3, 1],
+  [2, 1, 2],
+  [2, 3, 5],
+  [3, 4, 3],
+]
