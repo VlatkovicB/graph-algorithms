@@ -1,4 +1,5 @@
-import { undirected_cyclic_graph } from "./example_const.js"
+import { undirected_cyclic_graph } from "../example_const.js"
+
 const connectedComponentsCount = (graph) => {
   let count = 0
   const components = []

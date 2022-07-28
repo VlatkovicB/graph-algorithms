@@ -1,4 +1,4 @@
-import { entries } from "./example_const.js"
+import { entries } from "../example_const.js"
 
 const toGraph = (list) => {
   const graph = {}

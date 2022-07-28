@@ -1,6 +1,6 @@
-import { directed_weighted_acylclic_list } from "./example_const.js"
-import { PriorityQueue } from "./PriorityQueue.js"
-import { toWeightedGraph } from "./util.js"
+import { directed_weighted_acylclic_list } from "../example_const.js"
+import { PriorityQueue } from "../PriorityQueue.js"
+import { toWeightedGraph } from "../util.js"
 
 const dijkstra = (list, start) => {
   const graph = toWeightedGraph(list)

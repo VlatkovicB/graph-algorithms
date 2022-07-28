@@ -1,4 +1,4 @@
-import { directed_acyclic_graph } from "./example_const.js"
+import { directed_acyclic_graph } from "../example_const.js"
 
 const topologicalOrder = (graph) => {
   // Easy way O(n^2)

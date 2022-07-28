@@ -1,4 +1,4 @@
-import { matrix } from "./example_const.js"
+import { matrix } from "../example_const.js"
 
 // UNUSED
 const bfsMatrix = (map = [[]], start, end) => {
